@@ -7,13 +7,16 @@ let rindas = document.querySelector('.rindas');
 rindas.innerHTML = ' ';
 
 for (let i = 0; i < uzvaretajuSkaits; i++) {
-    let rand = Math.random()*vardi.length;
+    let rand = Math.random() * vardi.length;
     rand = Math.floor(rand);//noapaļo uz leju ar Math.floor
 
     let uzvaretajs = vardi[rand];//izvade konsolē
+    let ieguvums = balva[rand];
     rindas.innerHTML += `
+    
 <tr>
-<td>${i+1}</td>
+<td>${i + 1}</td>
 <td>${uzvaretajs}</td>
+<td>${ieguvums}</td>
 </tr>`
 }
